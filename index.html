@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>HidupOK</title>
+  <meta name="theme-color" content="#0a0b10"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="HidupOK"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="apple-touch-icon" href="icons/icon-192.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="app">
+
+  <header class="header">
+    <div class="hl">
+      <div class="logo"></div>
+      <div>
+        <h1 class="title">HidupOK</h1>
+        <p class="subtitle" id="hdr-date"></p>
+      </div>
+    </div>
+    <div class="hr">
+      <div class="streak-pill" title="Streak hari checklist selesai 100%">
+        <span>🔥</span><span id="streak-num">0</span><span class="sl">hari</span>
+      </div>
+      <button class="icon-btn" id="notif-btn">🔕</button>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <button class="ni active" data-tab="pagi"><span>🌅</span><span>Pagi</span></button>
+    <button class="ni" data-tab="fokus"><span>🎯</span><span>Fokus</span></button>
+    <button class="ni" data-tab="shopee"><span>🎮</span><span>Shopee</span></button>
+    <button class="ni" data-tab="badan"><span>💪</span><span>Badan</span></button>
+    <button class="ni" data-tab="checklist"><span>✅</span><span>Hari ini</span></button>
+  </nav>
+
+  <main class="main">
+
+    <!-- ══════════════════════════════
+         TAB: PAGI
+         Masalah utama: bangun → HP → rebahan
+         Solusi: protokol pagi yang konkret
+    ══════════════════════════════ -->
+    <section class="tab active" id="tab-pagi">
+      <div class="sec-hd">
+        <h2>Protokol Pagi</h2>
+        <p>Pagi yang benar = sisa hari yang benar. Ini satu-satunya yang perlu diubah dulu.</p>
+      </div>
+
+      <div class="alert-card red">
+        <span>🚨</span>
+        <div>
+          <strong>Kebiasaan yang harus dihentikan hari ini</strong>
+          <p>Buka HP sambil rebahan di pagi hari = dosis dopamin gratis yang merusak fokusmu untuk 4–6 jam ke depan. Otak langsung masuk mode pasif dan malas sebelum hari bahkan dimulai. Ini bukan soal disiplin — ini soal biologi.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Protokol 30 Menit Pertama</h3>
+      <div class="protocol-list">
+        <div class="proto-item">
+          <div class="proto-num">1</div>
+          <div class="proto-body">
+            <strong>Alarm bunyi → langsung duduk</strong>
+            <p>Kaki ke lantai dalam 5 detik. Jangan negosiasi dengan diri sendiri. Tidak perlu langsung semangat — cukup duduk dulu.</p>
+            <div class="proto-time">0–1 menit</div>
+          </div>
+        </div>
+        <div class="proto-item">
+          <div class="proto-num">2</div>
+          <div class="proto-body">
+            <strong>HP di-charge di luar kamar malam ini</strong>
+            <p>Beli jam alarm murah kalau perlu. Tidak ada HP di meja tidur = tidak ada godaan buka medsos sambil rebahan. Ini perubahan infrastruktur, bukan perubahan willpower.</p>
+            <div class="proto-time">Lakukan malam ini</div>
+          </div>
+        </div>
+        <div class="proto-item">
+          <div class="proto-num">3</div>
+          <div class="proto-body">
+            <strong>Minum 1 gelas air putih</strong>
+            <p>Simpan gelas atau botol air di sebelah tempat tidur. Minum sebelum memegang HP apapun. Tubuh dehidrasi setelah tidur — air = sinyal bangun untuk otak.</p>
+            <div class="proto-time">1–3 menit</div>
+          </div>
+        </div>
+        <div class="proto-item">
+          <div class="proto-num">4</div>
+          <div class="proto-body">
+            <strong>Sholat Subuh</strong>
+            <p>Waktu subuh ±05.00–05.30 WIB. Kalau masih belajar tata cara, tonton "cara sholat pemula" di YouTube malam ini — siapkan sebelum subuh tiba.</p>
+            <div class="proto-time">5–25 menit</div>
+          </div>
+        </div>
+        <div class="proto-item">
+          <div class="proto-num">5</div>
+          <div class="proto-body">
+            <strong>Olahraga pagi 15–20 menit</strong>
+            <p>Tidak perlu gym. Lihat tab Badan untuk program spesifik menurunkan perut buncit di rumah tanpa alat.</p>
+            <div class="proto-time">25–45 menit</div>
+          </div>
+        </div>
+        <div class="proto-item" style="border:none">
+          <div class="proto-num">6</div>
+          <div class="proto-body">
+            <strong>Baru buka HP — khusus cek orderan Shopee</strong>
+            <p>Setelah olahraga dan mandi, HP boleh dibuka. Tapi langsung ke Shopee Seller — bukan ke medsos. Proses orderan dulu, baru yang lain.</p>
+            <div class="proto-time">45–60 menit</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="alert-card blue">
+        <span>💡</span>
+        <div>
+          <strong>Strategi transisi tidur (bertahap, bukan langsung)</strong>
+          <p><b>Minggu 1:</b> tidur jam 00.30, bangun 05.30 &nbsp;|&nbsp; <b>Minggu 2:</b> tidur 00.00, bangun 05.15 &nbsp;|&nbsp; <b>Minggu 3:</b> tidur 23.30, bangun 05.00 &nbsp;|&nbsp; <b>Minggu 4+:</b> tidur 23.00, bangun 05.00. Jangan loncat langsung ke target akhir — tubuh butuh adaptasi.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Jadwal Harian Lengkap</h3>
+      <div class="sched">
+        <div class="sched-period amber">
+          <div class="period-hd"><span>🌅</span> Pagi — Aktifkan diri</div>
+          <div class="sr"><span class="st">05.00</span><div class="sd"><b>Bangun + protokol pagi</b><s>Duduk, air putih, sholat Subuh, olahraga</s></div><span class="dur">60m</span></div>
+          <div class="sr"><span class="st">06.00</span><div class="sd"><b>Mandi + sarapan ringan</b><s>Sarapan protein: telur, tempe — hindari nasi putih pagi hari (perut buncit)</s></div><span class="dur">45m</span></div>
+          <div class="sr"><span class="st">06.45</span><div class="sd"><b>Cek & proses orderan Shopee</b><s>Buka Shopee Seller, balas chat, kirim link GDrive, konfirmasi pesanan</s></div><span class="dur">30m</span></div>
+        </div>
+        <div class="sconn"></div>
+        <div class="sched-period purple">
+          <div class="period-hd"><span>💼</span> Pagi–Siang — Deep Work</div>
+          <div class="sr"><span class="st">07.15</span><div class="sd"><b>Blok fokus 1 — Optimasi Shopee</b><s>Update listing, thumbnail baru, riset game trending, pantau iklan</s></div><span class="dur">2j</span></div>
+          <div class="sr"><span class="st">09.15</span><div class="sd"><b>Blok fokus 2 — Konten & Marketing</b><s>Buat 1 konten TikTok/Reels per hari. Review game singkat 30–60 detik.</s></div><span class="dur">1.5j</span></div>
+          <div class="sr"><span class="st">10.45</span><div class="sd"><b>Blok fokus 3 — Skill & Belajar</b><s>Copywriting, iklan Shopee, atau cari kerja/freelance. YouTube gratis cukup.</s></div><span class="dur">1j</span></div>
+          <div class="sr"><span class="st">11.45</span><div class="sd"><b>Sholat Dzuhur + istirahat</b><s>Makan siang — hindari makan berlebihan siang hari. Istirahat max 30 menit.</s></div><span class="dur">45m</span></div>
+        </div>
+        <div class="sconn"></div>
+        <div class="sched-period teal">
+          <div class="period-hd"><span>🌇</span> Siang–Sore — Eksekusi</div>
+          <div class="sr"><span class="st">13.00</span><div class="sd"><b>Cari kerja / freelance</b><s>Daftar di Glints, LinkedIn, Fastwork. Kirim minimal 2 lamaran per hari.</s></div><span class="dur">2j</span></div>
+          <div class="sr"><span class="st">15.00</span><div class="sd"><b>Sholat Ashar</b><s>Alarm di 15.00. Berhenti dari layar, sholat, lalu lanjut.</s></div><span class="dur">15m</span></div>
+          <div class="sr"><span class="st">15.15</span><div class="sd"><b>Riset & ekspansi produk Shopee</b><s>Cari game/software baru, cek kompetitor, update harga, daftar flash sale</s></div><span class="dur">1.5j</span></div>
+        </div>
+        <div class="sconn"></div>
+        <div class="sched-period coral">
+          <div class="period-hd"><span>🌙</span> Malam — Wind Down</div>
+          <div class="sr"><span class="st">17.30</span><div class="sd"><b>Olahraga sore (opsional)</b><s>Jalan kaki 20–30 menit. Ini yang paling efektif untuk perut buncit.</s></div><span class="dur">30m</span></div>
+          <div class="sr"><span class="st">18.00</span><div class="sd"><b>Sholat Maghrib</b><s>Jeda dari semua layar. Evaluasi singkat apa yang sudah dikerjakan hari ini.</s></div><span class="dur">15m</span></div>
+          <div class="sr"><span class="st">19.00</span><div class="sd"><b>Makan malam + santai</b><s>Porsi kecil. Tidak scroll medsos saat makan — nikmati makanan dengan sadar.</s></div><span class="dur">45m</span></div>
+          <div class="sr"><span class="st">19.45</span><div class="sd"><b>Sholat Isya</b><s>Selesai sebelum jam 20.00.</s></div><span class="dur">15m</span></div>
+          <div class="sr"><span class="st">20.00</span><div class="sd"><b>Jurnal 3 hal</b><s>Tulis di buku/notes: 1 hal berhasil, 1 hal gagal, 1 target besok. Max 10 menit.</s></div><span class="dur">10m</span></div>
+          <div class="sr"><span class="st">20.30</span><div class="sd"><b>Mode wind-down</b><s>Redupkan layar. Tidak ada konten baru yang stimulatif. Baca buku fisik kalau ada.</s></div><span class="dur">—</span></div>
+          <div class="sr" style="border:none"><span class="st">23.00</span><div class="sd"><b>Tidur ✦ Target akhir</b><s>HP di luar kamar. Gelap total. Tidak ada negosiasi setelah jam ini.</s></div><span class="dur">ZZZ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         TAB: FOKUS
+         Masalah: distraksi kombinasi semua platform
+         Solusi: sistem blok fokus + aturan jelas
+    ══════════════════════════════ -->
+    <section class="tab" id="tab-fokus">
+      <div class="sec-hd">
+        <h2>Sistem Fokus</h2>
+        <p>Kamu terdistraksi semua platform bergantian. Ini bukan masalah niat — ini masalah sistem.</p>
+      </div>
+
+      <div class="alert-card red">
+        <span>🧠</span>
+        <div>
+          <strong>Kenapa kamu selalu terdistraksi meski sudah niat</strong>
+          <p>YouTube, TikTok, Instagram, Netflix — semuanya dirancang oleh ratusan insinyur untuk membuatmu tidak bisa berhenti. Willpower sendirian tidak akan menang. Yang menang adalah yang mengubah <b>lingkungannya</b> — bukan yang mencoba lebih keras.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Sistem Blok Fokus (Metode Time Boxing)</h3>
+      <div class="focus-blocks">
+        <div class="fb">
+          <div class="fb-time">07.15 – 09.15</div>
+          <div class="fb-label">Blok A</div>
+          <div class="fb-task">Shopee — Optimasi & Iklan</div>
+          <div class="fb-rule">HP silent. Tab browser hanya Shopee Seller. Tidak ada YouTube di background.</div>
+        </div>
+        <div class="fb">
+          <div class="fb-time">09.15 – 10.45</div>
+          <div class="fb-label">Blok B</div>
+          <div class="fb-task">Konten TikTok / Reels</div>
+          <div class="fb-rule">Buka TikTok hanya untuk upload — bukan scroll. Rekam, edit di CapCut, upload, tutup.</div>
+        </div>
+        <div class="fb">
+          <div class="fb-time">10.45 – 11.45</div>
+          <div class="fb-label">Blok C</div>
+          <div class="fb-task">Belajar skill baru</div>
+          <div class="fb-rule">1 video YouTube = 1 topik spesifik. Tidak autoplay. Catat poin penting di buku.</div>
+        </div>
+        <div class="fb">
+          <div class="fb-time">13.00 – 15.00</div>
+          <div class="fb-label">Blok D</div>
+          <div class="fb-task">Cari kerja / freelance</div>
+          <div class="fb-rule">Buka hanya Glints / LinkedIn / Fastwork. Minimal 2 lamaran atau 1 proposal per sesi.</div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Aturan Anti-Distraksi (Pasang Sekarang)</h3>
+      <div class="rules-list">
+        <div class="rule-item">
+          <div class="rule-icon">📵</div>
+          <div>
+            <strong>Install Cold Turkey di PC</strong>
+            <p>Blokir YouTube, Netflix, Instagram, TikTok selama jam kerja (07.00–15.00). Download gratis di coldturkey.io — tidak bisa di-bypass bahkan kalau uninstall.</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-icon">📱</div>
+          <div>
+            <strong>HP di laci atau ruangan lain saat kerja</strong>
+            <p>Penelitian terbukti: HP yang terlihat — bahkan dalam kondisi mati — mengurangi kapasitas kognitif. Jauh dari pandangan = jauh dari pikiran.</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-icon">⏱️</div>
+          <div>
+            <strong>Teknik Pomodoro untuk tugas berat</strong>
+            <p>25 menit kerja → 5 menit istirahat → ulangi 4x → istirahat 20 menit. Gunakan timer fisik atau aplikasi Forest. Selama 25 menit: tidak ada interupsi apapun.</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-icon">📋</div>
+          <div>
+            <strong>Tulis 3 tugas utama malam sebelumnya</strong>
+            <p>Setiap malam sebelum tidur, tulis 3 tugas yang HARUS selesai besok. Saat bangun, kamu sudah tahu mau ngapain — tidak ada ruang untuk "buka HP dulu sambil mikir mau ngapain".</p>
+          </div>
+        </div>
+        <div class="rule-item">
+          <div class="rule-icon">🔇</div>
+          <div>
+            <strong>Notifikasi mati semua kecuali Shopee Seller</strong>
+            <p>Masuk ke Settings HP → Notifikasi → matikan semua kecuali Shopee Seller, Whatsapp keluarga, dan telepon. Kamu yang cek medsos — bukan medsos yang memanggil kamu.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Roadmap Skill (Mulai dari Nol)</h3>
+      <div class="skill-road">
+        <div class="sk active-sk">
+          <div class="sk-n">1</div>
+          <div>
+            <b>Copywriting dasar</b>
+            <p>Bulan 1–2. Langsung berdampak ke deskripsi produk Shopee dan konten TikTok. Belajar di YouTube: "copywriting untuk pemula" atau "cara nulis caption jualan". 30 menit per hari cukup.</p>
+          </div>
+        </div>
+        <div class="sk">
+          <div class="sk-n">2</div>
+          <div>
+            <b>Desain Canva + thumbnail Shopee</b>
+            <p>Bulan 2–3. Thumbnail yang menarik = CTR lebih tinggi = penjualan lebih banyak tanpa tambah iklan. Canva gratis, tutorialnya banyak di YouTube.</p>
+          </div>
+        </div>
+        <div class="sk">
+          <div class="sk-n">3</div>
+          <div>
+            <b>TikTok Shop & konten gaming</b>
+            <p>Bulan 3–4. Daftarkan produk game digitalmu ke TikTok Shop. Buat konten review game — niche gaming di TikTok sangat aktif dan beli.</p>
+          </div>
+        </div>
+        <div class="sk">
+          <div class="sk-n">4</div>
+          <div>
+            <b>Shopee Ads yang menguntungkan</b>
+            <p>Bulan 4–5. Pelajari ROAS, CPC, dan cara baca data iklan Shopee. Ini yang akan membuat penghasilanmu tidak lagi fluktuatif.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         TAB: SHOPEE
+         Spesifik: game digital via GDrive
+         Masalah: fluktuatif, iklan belum optimal
+    ══════════════════════════════ -->
+    <section class="tab" id="tab-shopee">
+      <div class="sec-hd">
+        <h2>Scale Up Shopee</h2>
+        <p>Dari 3–7 juta fluktuatif → 8–12 juta stabil. Ini roadmap spesifiknya.</p>
+      </div>
+
+      <div class="income-tracker">
+        <div class="it-label">Target bulanan</div>
+        <div class="it-amount">Rp 10.000.000</div>
+        <div class="it-sub">= Rp 333.000 per hari dari Shopee saja</div>
+        <div class="it-bars">
+          <div class="it-row"><span>Sekarang</span><div class="it-track"><div class="it-fill" style="width:45%;background:var(--coral)"></div></div><span>~5 jt</span></div>
+          <div class="it-row"><span>Target</span><div class="it-track"><div class="it-fill" style="width:85%;background:var(--teal)"></div></div><span>10 jt</span></div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Kenapa Penghasilan Shopee Masih Fluktuatif</h3>
+      <div class="analysis-list">
+        <div class="an-item">
+          <span class="an-icon">📉</span>
+          <div><b>Produk tidak diupdate rutin</b><p>Algoritma Shopee menurunkan ranking listing yang tidak aktif. Produk lama tanpa update = traffic turun setiap minggu.</p></div>
+        </div>
+        <div class="an-item">
+          <span class="an-icon">🎯</span>
+          <div><b>Iklan belum diarahkan dengan data</b><p>Iklan yang tidak dipantau setiap hari akan membakar budget tanpa hasil. Harus ada ritual harian: cek CTR, konversi, ROAS setiap pagi.</p></div>
+        </div>
+        <div class="an-item">
+          <span class="an-icon">🗂️</span>
+          <div><b>Terlalu bergantung pada produk lama</b><p>Produk digital game punya lifecycle pendek. Game yang ramai bulan lalu bisa sepi bulan ini. Harus ada produk baru masuk setiap minggu.</p></div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Roadmap 90 Hari</h3>
+      <div class="phase-list">
+        <div class="phase p1">
+          <div class="phd"><span class="pn">01</span><div><h3>Audit Total</h3><span>Minggu 1</span></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Audit semua listing aktif</b><p>Buka setiap produk. Cek: foto thumbnail (masih menarik?), deskripsi (jelas cara download via GDrive?), harga (kompetitif?). Tandai yang perlu diupdate.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Amankan sistem GDrive</b><p>Buat struktur folder: satu folder per game, sharing "Anyone with link - View only". Test link dari incognito browser. Siapkan link cadangan kalau ada yang bermasalah.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Buat template chat pembeli</b><p>3 template siap pakai: (1) konfirmasi pesanan + cara download, (2) troubleshoot kalau gagal download, (3) follow-up minta review bintang 5. Simpan di Shopee template chat.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Identifikasi 5 produk terlaris</b><p>Cek data penjualan 3 bulan terakhir. 5 produk ini = mesin utama. Fokuskan iklan dan optimasi di sini dulu.</p></div></div>
+        </div>
+        <div class="pconn"></div>
+        <div class="phase p2">
+          <div class="phd"><span class="pn">02</span><div><h3>Optimasi & Iklan</h3><span>Minggu 2–4</span></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Rebuild thumbnail 5 produk terlaris</b><p>Pakai Canva: background gelap/hitam, nama game besar dan jelas, badge harga mencolok, tambah teks "Langsung Main" atau "Garansi". Game visual = thumbnail visual harus kuat.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Perbaiki iklan yang ada</b><p>Cek setiap iklan aktif: kalau CTR di bawah 2% → ganti thumbnail. Kalau konversi di bawah 1% → evaluasi harga atau deskripsi. Budget iklan: Rp 30–50rb/hari per produk, pantau setiap pagi.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Format judul yang tepat untuk game digital</b><p>[Nama Game] [Platform] | [Benefit utama] | [Garansi/Keunggulan]. Contoh: "GTA V PC Steam | Langsung Main No CD | File Full + Garansi".</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Daftar Flash Sale Shopee mingguan</b><p>Masuk ke Shopee Seller → Promosi → Flash Sale. Daftarkan 3–5 produk dengan diskon 10–20%. Produk digital = tidak ada ongkir = konversi Flash Sale sangat tinggi.</p></div></div>
+        </div>
+        <div class="pconn"></div>
+        <div class="phase p3">
+          <div class="phd"><span class="pn">03</span><div><h3>Ekspansi Produk</h3><span>Bulan 2</span></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Tambah 1 game baru per minggu (minimal)</b><p>Riset kata kunci di Shopee: ketik nama game populer, lihat volume pencarian dan jumlah kompetitor. Incai game dengan pencarian tinggi tapi kompetitor sedikit.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Ekspansi ke produk digital lain</b><p>Tidak hanya game: akun Canva Pro, software desain, antivirus, akun streaming. Margin besar, pengiriman instan, tidak ada komplain ongkir.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Bundle produk</b><p>"Paket Gaming PC Lengkap": game + antivirus + VPN. Harga bundle lebih tinggi, margin lebih tebal, pembeli merasa dapat nilai lebih.</p></div></div>
+        </div>
+        <div class="pconn"></div>
+        <div class="phase p4">
+          <div class="phd"><span class="pn">04</span><div><h3>TikTok Shop & Autopilot</h3><span>Bulan 3</span></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Daftar TikTok Shop</b><p>Sambungkan produk Shopee ke TikTok Shop. Produk digital sangat cocok untuk konten TikTok: "game PC murah worth it?" — video 30–60 detik bisa viral dan jual ratusan unit.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Program afiliasi TikTok</b><p>Biarkan orang lain mempromosikan produkmu dengan komisi. Kamu tidak perlu buat konten — mereka yang buat, kamu dapat penjualan.</p></div></div>
+          <div class="pt"><div class="pd"></div><div><b>Ritual harian Shopee (15 menit)</b><p>Pagi: cek orderan + balas chat + pantau iklan. Sore: cek produk baru + update listing. Jika ini sudah autopilot, waktumu bebas untuk sumber income lain.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         TAB: BADAN
+         Masalah: gemuk/perut buncit, olahraga mood-based
+         Solusi: program spesifik perut, tanpa gym
+    ══════════════════════════════ -->
+    <section class="tab" id="tab-badan">
+      <div class="sec-hd">
+        <h2>Program Badan</h2>
+        <p>Khusus untuk perut buncit — tanpa gym, bisa dilakukan di rumah.</p>
+      </div>
+
+      <div class="alert-card blue">
+        <span>💡</span>
+        <div>
+          <strong>Yang paling efektif untuk perut buncit</strong>
+          <p>Bukan sit-up. Bukan crunch. Yang paling efektif adalah: <b>defisit kalori + kardio sedang + pola makan yang benar</b>. Lemak perut tidak bisa dikecilkan dengan latihan perut saja — harus lemak tubuh total yang turun dulu.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Program Pagi — 20 Menit (Tanpa Alat)</h3>
+      <div class="workout-list">
+        <div class="wo-item">
+          <div class="wo-num">1</div>
+          <div class="wo-body">
+            <strong>Jumping Jack</strong>
+            <div class="wo-detail"><span>3 set × 30 detik</span><span class="wo-rest">istirahat 15 detik</span></div>
+            <p>Warming up + bakar kalori. Jangan skip ini — tubuh perlu warm-up sebelum latihan inti.</p>
+          </div>
+        </div>
+        <div class="wo-item">
+          <div class="wo-num">2</div>
+          <div class="wo-body">
+            <strong>Plank</strong>
+            <div class="wo-detail"><span>3 set × 30 detik</span><span class="wo-rest">istirahat 20 detik</span></div>
+            <p>Core terkuat untuk perut. Posisi: siku di lantai, badan lurus seperti papan. Jangan angkat panggul atau turunkan punggung.</p>
+          </div>
+        </div>
+        <div class="wo-item">
+          <div class="wo-num">3</div>
+          <div class="wo-body">
+            <strong>High Knees</strong>
+            <div class="wo-detail"><span>3 set × 30 detik</span><span class="wo-rest">istirahat 15 detik</span></div>
+            <p>Lari di tempat sambil angkat lutut setinggi pinggang. Ini pembunuh lemak perut yang efektif sekaligus melatih jantung.</p>
+          </div>
+        </div>
+        <div class="wo-item">
+          <div class="wo-num">4</div>
+          <div class="wo-body">
+            <strong>Mountain Climber</strong>
+            <div class="wo-detail"><span>3 set × 20 repetisi</span><span class="wo-rest">istirahat 20 detik</span></div>
+            <p>Posisi push-up, tarik lutut bergantian ke dada secepat mungkin. Melatih seluruh core sekaligus.</p>
+          </div>
+        </div>
+        <div class="wo-item">
+          <div class="wo-num">5</div>
+          <div class="wo-body">
+            <strong>Push-up</strong>
+            <div class="wo-detail"><span>3 set × 10–15 repetisi</span><span class="wo-rest">istirahat 30 detik</span></div>
+            <p>Membangun massa otot dada dan lengan. Massa otot lebih tinggi = metabolisme lebih tinggi = bakar lemak lebih banyak seharian.</p>
+          </div>
+        </div>
+        <div class="wo-item" style="border:none">
+          <div class="wo-num">6</div>
+          <div class="wo-body">
+            <strong>Squat</strong>
+            <div class="wo-detail"><span>3 set × 15 repetisi</span><span class="wo-rest">istirahat 20 detik</span></div>
+            <p>Otot kaki = otot terbesar di tubuh. Melatih kaki = membakar kalori paling banyak. Bonus: postur tubuh membaik.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Bonus Sore — Jalan Kaki 30 Menit</h3>
+      <div class="walk-card">
+        <div class="walk-icon">🚶</div>
+        <div>
+          <strong>Jalan kaki adalah senjata rahasia perut buncit</strong>
+          <p>Jalan kaki 30 menit sore hari (setelah jam 17.00) membakar sekitar 150–200 kalori dan menurunkan kortisol (hormon stres yang menyimpan lemak di perut). Tidak perlu cepat — tempo sedang sudah cukup. Ini juga waktu yang bagus untuk menenangkan pikiran setelah seharian kerja.</p>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Pola Makan (Tidak Perlu Diet Ketat)</h3>
+      <div class="makan-list">
+        <div class="mk-item ok">
+          <span>✓</span>
+          <div><b>Sarapan: protein + lemak sehat</b><p>Telur rebus/ceplok, tempe goreng, alpukat. Hindari nasi putih dan roti di pagi hari — insulin spike pagi = ngantuk dan lapar lagi cepat.</p></div>
+        </div>
+        <div class="mk-item ok">
+          <span>✓</span>
+          <div><b>Makan siang: porsi normal tapi sadar</b><p>Nasi boleh, tapi piring setengahnya sayur. Makan perlahan, berhenti sebelum kenyang penuh. Hindari makan sambil scroll HP.</p></div>
+        </div>
+        <div class="mk-item ok">
+          <span>✓</span>
+          <div><b>Makan malam: porsi lebih kecil dari siang</b><p>Kalau makan malam jam 19.00–19.30, tubuh punya waktu membakar sebelum tidur. Hindari karbohidrat berat malam hari.</p></div>
+        </div>
+        <div class="mk-item ok">
+          <span>✓</span>
+          <div><b>Air putih 8 gelas per hari</b><p>Sering lapar padahal sebenarnya haus. Minum segelas air dulu sebelum ngemil. Ini saja bisa mengurangi 200–300 kalori ekstra per hari.</p></div>
+        </div>
+        <div class="mk-item no">
+          <span>✗</span>
+          <div><b>Kurangi: minuman manis, gorengan berlebih, mie instan malam</b><p>Tidak perlu dihilangkan total — cukup dikurangi frekuensinya. Perubahan sedikit tapi konsisten lebih baik dari perubahan drastis yang tidak bertahan.</p></div>
+        </div>
+      </div>
+
+      <!-- PMO Streak -->
+      <h3 class="sub-title" style="margin-top:28px">Stop PMO</h3>
+      <div class="pmo-wrap">
+        <div class="pmo-card">
+          <div class="pmo-lbl">Streak bebas PMO</div>
+          <div class="pmo-num" id="pmo-days">0</div>
+          <div class="pmo-unit">hari berturut-turut</div>
+          <div class="pmo-acts">
+            <button class="pb ok" id="pmo-ok">✓ Hari ini aman</button>
+            <button class="pb rst" id="pmo-reset">↩ Reset</button>
+          </div>
+        </div>
+        <div class="ms-list">
+          <div class="ms" id="ms7"><span>⭐</span><div><b>7 hari</b><p>Dopamin mulai stabil</p></div></div>
+          <div class="ms" id="ms21"><span>🌟</span><div><b>21 hari</b><p>Habit baru terbentuk</p></div></div>
+          <div class="ms" id="ms90"><span>💎</span><div><b>90 hari</b><p>Perubahan permanen</p></div></div>
+        </div>
+      </div>
+      <div class="alert-card purple" style="margin-top:14px">
+        <span>🔗</span>
+        <div>
+          <strong>Koneksi PMO, perut buncit, dan produktivitas</strong>
+          <p>PMO meningkatkan kortisol dan menurunkan testosteron — dua hal yang secara langsung menyebabkan penumpukan lemak perut dan rasa malas. Berhenti PMO + olahraga rutin = hasil fisik yang jauh lebih cepat dari olahraga saja.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         TAB: CHECKLIST HARIAN
+    ══════════════════════════════ -->
+    <section class="tab" id="tab-checklist">
+      <div class="sec-hd">
+        <h2>Checklist Harian</h2>
+        <p id="cl-date"></p>
+      </div>
+
+      <div class="prog-row">
+        <span class="ps"><span id="cl-done">0</span>/12</span>
+        <div class="pt2"><div class="pb2" id="prog-bar"></div></div>
+        <span class="pp" id="prog-pct">0%</span>
+      </div>
+
+      <!-- Kelompok: Pagi -->
+      <div class="cl-group">
+        <div class="cl-group-label">🌅 Pagi</div>
+        <div class="ci" data-id="0"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Bangun jam 05.00 — langsung duduk, tidak rebahan</b><s>Kaki ke lantai dalam 5 detik setelah alarm</s></div><span class="ctag tpagi">Krusial</span></div>
+        <div class="ci" data-id="1"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Minum air putih sebelum pegang HP</b><s>1 gelas penuh — sebelum apapun</s></div><span class="ctag tsehat">Sehat</span></div>
+        <div class="ci" data-id="2"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Sholat Subuh</b><s>Habit rohani paling penting yang dibangun sekarang</s></div><span class="ctag tibadah">Ibadah</span></div>
+        <div class="ci" data-id="3"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Olahraga pagi 20 menit</b><s>6 gerakan di tab Badan — tidak perlu gym</s></div><span class="ctag tsehat">Sehat</span></div>
+      </div>
+
+      <!-- Kelompok: Bisnis -->
+      <div class="cl-group">
+        <div class="cl-group-label">💼 Bisnis</div>
+        <div class="ci" data-id="4"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Proses orderan Shopee + balas chat</b><s>Cek Shopee Seller — kirim link GDrive, konfirmasi pesanan</s></div><span class="ctag tbisnis">Shopee</span></div>
+        <div class="ci" data-id="5"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Pantau & optimasi iklan Shopee</b><s>Cek CTR dan ROAS setiap pagi — hentikan iklan yang tidak profit</s></div><span class="ctag tbisnis">Shopee</span></div>
+        <div class="ci" data-id="6"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Update atau tambah 1 listing</b><s>Thumbnail, deskripsi, harga, atau produk baru</s></div><span class="ctag tbisnis">Shopee</span></div>
+        <div class="ci" data-id="7"><div class="cb"><div class="ck"></div></div><div class="cc"><b>1 tindakan cari kerja / freelance</b><s>Kirim lamaran, buat proposal, atau daftar platform baru</s></div><span class="ctag tincome">Income</span></div>
+      </div>
+
+      <!-- Kelompok: Fokus & Belajar -->
+      <div class="cl-group">
+        <div class="cl-group-label">🎯 Fokus & Belajar</div>
+        <div class="ci" data-id="8"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Tidak buka medsos sebelum jam 07.00</b><s>HP hanya untuk alarm dan cek orderan pagi hari</s></div><span class="ctag tfokus">Fokus</span></div>
+        <div class="ci" data-id="9"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Belajar skill 30 menit</b><s>Copywriting, Canva, TikTok marketing — pilih satu, konsisten</s></div><span class="ctag tskill">Skill</span></div>
+      </div>
+
+      <!-- Kelompok: Malam -->
+      <div class="cl-group">
+        <div class="cl-group-label">🌙 Sholat & Malam</div>
+        <div class="ci" data-id="10"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Sholat Dzuhur, Ashar, Maghrib, Isya</b><s>4 waktu setelah Subuh — usahakan tidak bolong satu pun</s></div><span class="ctag tibadah">Ibadah</span></div>
+        <div class="ci" data-id="11"><div class="cb"><div class="ck"></div></div><div class="cc"><b>Tidur lebih awal dari kemarin</b><s>Target akhir jam 23.00 — mundur 30 menit per minggu</s></div><span class="ctag tsehat">Sehat</span></div>
+      </div>
+
+      <div class="cl-footer">
+        <button class="reset-btn" id="reset-cl">Reset checklist hari ini</button>
+        <div class="quote-card"><p id="quote-text"></p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
