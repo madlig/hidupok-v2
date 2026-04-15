@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>HidupOK</title>
+  <meta name="description" content="Manajemen diri personal: jadwal, Shopee game digital, income, mindset & checklist."/>
+  <meta name="theme-color" content="#0c0e14"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="HidupOK"/>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="apple-touch-icon" href="icons/icon-192.png"/>
+  <link rel="icon" href="icons/icon-192.png"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo-mark"></div>
+      <div>
+        <h1 class="app-title">HidupOK</h1>
+        <p class="app-date" id="app-date"></p>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="streak-badge" id="streak-badge" title="Streak checklist harian selesai 100%">
+        <span>🔥</span>
+        <span id="streak-count">0</span>
+        <span class="streak-label">hari</span>
+      </div>
+      <button class="icon-btn" id="notif-btn" title="Aktifkan notifikasi">🔕</button>
+    </div>
+  </header>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <button class="nav-item active" data-tab="jadwal"><span class="ni">⏰</span><span>Jadwal</span></button>
+    <button class="nav-item" data-tab="shopee"><span class="ni">🎮</span><span>Shopee</span></button>
+    <button class="nav-item" data-tab="income"><span class="ni">💰</span><span>Income</span></button>
+    <button class="nav-item" data-tab="mindset"><span class="ni">🧠</span><span>Mindset</span></button>
+    <button class="nav-item" data-tab="checklist"><span class="ni">✅</span><span>Checklist</span></button>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- ═══════════════════════════════════
+         TAB 1 · JADWAL
+    ═══════════════════════════════════ -->
+    <section class="tab active" id="tab-jadwal">
+      <div class="sec-head">
+        <h2>Jadwal Harian</h2>
+        <p>Transisi dari tidur jam 2 pagi → bangun jam 5. Bertahap, bukan langsung.</p>
+      </div>
+
+      <div class="info-banner">
+        <span class="info-icon">💡</span>
+        <div>
+          <strong>Strategi transisi tidur</strong>
+          <p>Mundurkan tidur 30 menit lebih awal setiap minggu. Minggu 1: tidur jam 00.30, Minggu 2: jam 00.00, Minggu 3: jam 23.30, Minggu 4: jam 23.00. Jangan langsung drastis — tubuh butuh adaptasi.</p>
+        </div>
+      </div>
+
+      <div class="sched-wrap">
+        <div class="sched-period amber">
+          <div class="period-head"><span>🌅</span> Pagi — Bangun & Aktifkan</div>
+          <div class="sched-row"><span class="t">05.00</span><div class="sd"><b>Bangun tidur</b><s>Langsung duduk — jangan rebahan lagi. Minum air putih 1 gelas.</s></div><span class="dur">5m</span></div>
+          <div class="sched-row"><span class="t">05.10</span><div class="sd"><b>Sholat Subuh ⭐</b><s>Habit baru. Mulai dari ini dulu — waktu subuh ±05.00–05.30 WIB.</s></div><span class="dur">20m</span></div>
+          <div class="sched-row"><span class="t">05.30</span><div class="sd"><b>Olahraga ringan</b><s>Push-up 20x, stretching, atau jalan di tempat. Tidak perlu ke gym.</s></div><span class="dur">20m</span></div>
+          <div class="sched-row"><span class="t">06.00</span><div class="sd"><b>Mandi + sarapan</b><s>Sarapan ringan cukup. Buka checklist harian, niatkan target hari ini.</s></div><span class="dur">45m</span></div>
+        </div>
+
+        <div class="sched-connector"></div>
+
+        <div class="sched-period purple">
+          <div class="period-head"><span>☀️</span> Pagi–Siang — Deep Work</div>
+          <div class="sched-row"><span class="t">07.00</span><div class="sd"><b>Kelola Shopee Game Digital</b><s>Cek pesanan, kirim link GDrive, balas chat, pantau iklan.</s></div><span class="dur">2j</span></div>
+          <div class="sched-row"><span class="t">09.00</span><div class="sd"><b>Optimasi & riset produk</b><s>Cari game trending, update listing, foto/thumbnail baru.</s></div><span class="dur">2j</span></div>
+          <div class="sched-row"><span class="t">11.00</span><div class="sd"><b>Kerja penghasilan tidak tetap</b><s>Fokus pada sumber income yang sedang berjalan.</s></div><span class="dur">1j</span></div>
+          <div class="sched-row"><span class="t">12.00</span><div class="sd"><b>Sholat Dzuhur ⭐</b><s>Jadikan alarm khusus. Tidak perlu lama — 10 menit cukup.</s></div><span class="dur">15m</span></div>
+          <div class="sched-row"><span class="t">12.15</span><div class="sd"><b>Makan siang + istirahat</b><s>Makan dulu baru rebahan. Maksimal 45 menit — pakai timer.</s></div><span class="dur">45m</span></div>
+        </div>
+
+        <div class="sched-connector"></div>
+
+        <div class="sched-period teal">
+          <div class="period-head"><span>🌇</span> Sore — Lanjut & Bangun Skill</div>
+          <div class="sched-row"><span class="t">13.00</span><div class="sd"><b>Belajar skill baru</b><s>YouTube gratis: copywriting, iklan Shopee, atau cara jualan TikTok Shop.</s></div><span class="dur">1.5j</span></div>
+          <div class="sched-row"><span class="t">14.30</span><div class="sd"><b>Konten promosi produk</b><s>Buat 1 konten TikTok/Reels per hari untuk game yang dijual.</s></div><span class="dur">1j</span></div>
+          <div class="sched-row"><span class="t">15.30</span><div class="sd"><b>Sholat Ashar ⭐</b><s>Alarm di jam 15.30. Langsung sholat setelah alarm bunyi.</s></div><span class="dur">10m</span></div>
+          <div class="sched-row"><span class="t">16.00</span><div class="sd"><b>Cek hasil & riset bisnis baru</b><s>Pantau penjualan Shopee, cari ide produk digital atau afiliasi baru.</s></div><span class="dur">1j</span></div>
+        </div>
+
+        <div class="sched-connector"></div>
+
+        <div class="sched-period coral">
+          <div class="period-head"><span>🌙</span> Malam — Wind Down & Evaluasi</div>
+          <div class="sched-row"><span class="t">18.00</span><div class="sd"><b>Sholat Maghrib ⭐</b><s>Waktu maghrib ±18.00 WIB. Jadikan ritual jeda dari layar.</s></div><span class="dur">15m</span></div>
+          <div class="sched-row"><span class="t">18.30</span><div class="sd"><b>Makan malam + santai ringan</b><s>Tidak ada medsos. Boleh nonton/baca yang bermanfaat.</s></div><span class="dur">1j</span></div>
+          <div class="sched-row"><span class="t">19.30</span><div class="sd"><b>Sholat Isya ⭐</b><s>Selesaikan sebelum jam 20.00. Berdoa untuk tujuan hidupmu.</s></div><span class="dur">15m</span></div>
+          <div class="sched-row"><span class="t">20.00</span><div class="sd"><b>Jurnal + evaluasi hari</b><s>Tulis 3 hal: apa yang berhasil, apa yang gagal, apa yang diperbaiki besok.</s></div><span class="dur">30m</span></div>
+          <div class="sched-row"><span class="t">20.30</span><div class="sd"><b>Mode wind-down</b><s>Redupkan layar. Tidak ada konten berat. Siapkan mental untuk tidur.</s></div><span class="dur">30m</span></div>
+          <div class="sched-row" style="border:none"><span class="t">23.00</span><div class="sd"><b>Tidur ✦ Target akhir</b><s>Mulai dari jam 00.30 → mundur 30 menit per minggu sampai jam 23.00.</s></div><span class="dur">ZZZ</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TAB 2 · SHOPEE GAME DIGITAL
+    ═══════════════════════════════════ -->
+    <section class="tab" id="tab-shopee">
+      <div class="sec-head">
+        <h2>Shopee · Game Digital</h2>
+        <p>Strategi khusus produk digital — berbeda dari produk fisik.</p>
+      </div>
+
+      <div class="info-banner warn">
+        <span class="info-icon">⚠️</span>
+        <div>
+          <strong>Perhatian: Risiko & Legalitas</strong>
+          <p>Pastikan game yang dijual adalah lisensi resmi atau metode yang diizinkan publisher. Akun Shopee bisa kena suspend kalau ada laporan pelanggaran hak cipta. Jaga kepercayaan pembeli dengan memastikan file aman dan link GDrive selalu aktif.</p>
+        </div>
+      </div>
+
+      <div class="phase-list">
+        <div class="phase p1">
+          <div class="phase-hd"><span class="pn">01</span><div><h3>Audit & Keamanan</h3><span>Sekarang — Minggu ini</span></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Audit semua listing</b><p>Pastikan setiap produk: deskripsi jelas, screenshot gameplay nyata, format file & cara download tertulis.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Amankan link Google Drive</b><p>Atur sharing: "Anyone with the link can view". Buat folder terpisah per produk, jangan campur semua di satu folder.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Buat template balas chat</b><p>Siapkan teks siap pakai untuk: cara download, troubleshoot, dan garansi. Hemat waktu, respons cepat = rating naik.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Cek kompetitor</b><p>Cari kata kunci game yang kamu jual di Shopee. Lihat harga, foto thumbnail, dan ulasan kompetitor teratas.</p></div></div>
+        </div>
+
+        <div class="phase-conn"></div>
+
+        <div class="phase p2">
+          <div class="phase-hd"><span class="pn">02</span><div><h3>Optimasi Listing</h3><span>Minggu 1–2</span></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Thumbnail menarik</b><p>Gunakan Canva (gratis). Template gaming: background gelap, judul game besar, harga mencolok, badge "MURAH" atau "RESMI".</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Judul produk yang tepat</b><p>Format: [Nama Game] + [Platform] + [Keterangan]. Contoh: "GTA V PC Steam Key | Langsung Main | Garansi".</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Variasi produk</b><p>Kalau bisa, buat variasi harga: versi Standard, Deluxe, Bundle. Pembeli suka pilihan.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Harga psikologis</b><p>Rp 45.000 terasa lebih murah dari Rp 50.000. Gunakan harga yang diakhiri 000, 500, atau 900.</p></div></div>
+        </div>
+
+        <div class="phase-conn"></div>
+
+        <div class="phase p3">
+          <div class="phase-hd"><span class="pn">03</span><div><h3>Scale Traffic</h3><span>Minggu 3–6</span></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Shopee Iklan CPC</b><p>Mulai Rp 30.000/hari untuk 2–3 produk terlaris. Pantau CTR dan konversi setiap hari. Stop yang tidak profit.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Konten TikTok gaming</b><p>Review singkat game yang kamu jual: "Game PC murah under 50rb, worth it?" — video 30–60 detik, taruh link Shopee di bio.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Ikuti Flash Sale Shopee</b><p>Daftar Flash Sale mingguan. Produk digital sangat cocok karena tidak ada ongkir — konversi lebih tinggi.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Ekspansi ke TikTok Shop</b><p>Daftarkan toko yang sama di TikTok Shop. Produk digital = margin besar, cocok untuk affiliate TikTok.</p></div></div>
+        </div>
+
+        <div class="phase-conn"></div>
+
+        <div class="phase p4">
+          <div class="phase-hd"><span class="pn">04</span><div><h3>Ekspansi Produk</h3><span>Bulan 2+</span></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Tambah kategori produk digital</b><p>Tidak hanya game: software desain (Canva Pro), akun streaming, VPN, Microsoft Office, antivirus.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Bundle produk</b><p>"Paket Gaming": game + VPN + antivirus. Harga lebih tinggi, margin lebih besar.</p></div></div>
+          <div class="pt"><div class="pdot"></div><div><b>Program afiliasi internal</b><p>Ajak orang review produkmu di YouTube/TikTok dengan komisi. Modal nol, exposure besar.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TAB 3 · INCOME
+    ═══════════════════════════════════ -->
+    <section class="tab" id="tab-income">
+      <div class="sec-head">
+        <h2>Target Penghasilan</h2>
+        <p>Tiga sumber menuju 20 juta — semua bisa dimulai tanpa skill khusus dulu.</p>
+      </div>
+
+      <div class="target-hero">
+        <div>
+          <span class="tl">Target bulanan</span>
+          <span class="ta">Rp 20.000.000</span>
+          <span class="td">= Rp 667.000 per hari</span>
+        </div>
+        <div class="inc-bars">
+          <div class="inc-row"><span class="is">Shopee Digital</span><div class="ibt"><div class="ibf s1" style="width:50%"></div></div><span class="ir">8–10 jt</span></div>
+          <div class="inc-row"><span class="is">Income Tidak Tetap</span><div class="ibt"><div class="ibf s2" style="width:30%"></div></div><span class="ir">5–7 jt</span></div>
+          <div class="inc-row"><span class="is">Bisnis/Afiliasi Baru</span><div class="ibt"><div class="ibf s3" style="width:20%"></div></div><span class="ir">3–5 jt</span></div>
+        </div>
+      </div>
+
+      <div class="info-banner">
+        <span class="info-icon">🎯</span>
+        <div>
+          <strong>Karena belum punya skill khusus — mulai dari sini</strong>
+          <p>Skill dibangun sambil jalan. Fokus dulu pada yang bisa menghasilkan uang tanpa skill tinggi, sambil pelan-pelan belajar satu skill yang paling relevan.</p>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <div class="icard c1">
+          <div class="chip">Sumber 1 · Jalan sekarang</div>
+          <h3>Shopee Game Digital</h3>
+          <div class="ctarget">Target: Rp 8–10 jt / bulan</div>
+          <ul class="clist">
+            <li>Optimalkan listing yang sudah ada</li>
+            <li>Aktifkan iklan CPC Rp 30rb/hari</li>
+            <li>Tambah produk digital baru tiap minggu</li>
+            <li>Daftarkan ke TikTok Shop juga</li>
+          </ul>
+        </div>
+        <div class="icard c2">
+          <div class="chip">Sumber 2 · Stabilkan</div>
+          <h3>Income Tidak Tetap</h3>
+          <div class="ctarget">Target: Rp 5–7 jt / bulan</div>
+          <ul class="clist">
+            <li>Identifikasi apa sumber income ini sekarang</li>
+            <li>Cari pola: kapan ramai, kapan sepi?</li>
+            <li>Tambah satu klien/sumber baru per bulan</li>
+            <li>Catat semua pemasukan — lacak tren bulanan</li>
+          </ul>
+        </div>
+        <div class="icard c3">
+          <div class="chip">Sumber 3 · Mulai tanpa skill</div>
+          <h3>Afiliasi & Reseller</h3>
+          <div class="ctarget">Target: Rp 3–5 jt / bulan</div>
+          <ul class="clist">
+            <li><b>Afiliasi Shopee</b> — promosi produk orang lain, dapat komisi</li>
+            <li><b>Afiliasi TikTok Shop</b> — review produk di TikTok, link di bio</li>
+            <li><b>Reseller produk digital</b> — beli lisensi, jual lebih tinggi</li>
+            <li>Modal nol atau sangat kecil untuk mulai</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skill-roadmap">
+        <h3>Skill yang perlu dibangun (bertahap)</h3>
+        <div class="skill-list">
+          <div class="skill-item active-skill">
+            <div class="skill-num">1</div>
+            <div><b>Copywriting dasar</b><p>Paling cepat menghasilkan uang. Bisa untuk deskripsi produk, konten TikTok, iklan. Belajar gratis di YouTube — 30 menit/hari cukup.</p></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-num">2</div>
+            <div><b>Basic desain Canva</b><p>Untuk thumbnail Shopee dan konten promosi. Canva gratis, bisa dipelajari dalam 1 minggu.</p></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-num">3</div>
+            <div><b>TikTok marketing</b><p>Platform gratis dengan jangkauan besar. Cocok untuk promosi game digital ke target yang tepat.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TAB 4 · MINDSET
+    ═══════════════════════════════════ -->
+    <section class="tab" id="tab-mindset">
+      <div class="sec-head">
+        <h2>Mindset & Stop PMO</h2>
+        <p>Perubahan nyata dimulai dari dalam — bukan dari motivasi sesaat.</p>
+      </div>
+
+      <div class="pmo-section">
+        <div class="pmo-card">
+          <div class="pmo-label">Streak Bebas PMO</div>
+          <div class="pmo-num" id="pmo-days">0</div>
+          <div class="pmo-unit">hari berturut-turut</div>
+          <div class="pmo-acts">
+            <button class="pbtn ok" id="pmo-ok">✓ Hari ini aman</button>
+            <button class="pbtn rst" id="pmo-reset">↩ Reset</button>
+          </div>
+        </div>
+        <div class="ms-list">
+          <div class="ms" id="ms7"><span>⭐</span><div><b>7 hari</b><p>Otak mulai reset dopamin</p></div></div>
+          <div class="ms" id="ms21"><span>🌟</span><div><b>21 hari</b><p>Habit baru terbentuk</p></div></div>
+          <div class="ms" id="ms90"><span>💎</span><div><b>90 hari</b><p>Perubahan permanen</p></div></div>
+        </div>
+      </div>
+
+      <div class="mindset-grid">
+        <div class="mb">
+          <h3>🛡️ Sistem Pertahanan PMO</h3>
+          <div class="mi"><span>📵</span><div><b>Blokir semua trigger sekarang</b><p>Install Cold Turkey (PC) atau BlockSite (Chrome). Blokir sebelum tidur malam ini — jangan tunda.</p></div></div>
+          <div class="mi"><span>📅</span><div><b>Isi setiap momen kosong</b><p>Waktu kosong = bahaya. Kalau tidak ada kerjaan, buka checklist atau belajar Canva/copywriting.</p></div></div>
+          <div class="mi"><span>🌙</span><div><b>Jam 1-2 malam adalah zona berbahaya</b><p>Sebelum kebiasaan tidur berubah, ini waktu paling rentan. Pasang timer tidur — HP di-charge di luar kamar.</p></div></div>
+        </div>
+        <div class="mb">
+          <h3>🕌 Mulai Sholat dari Nol</h3>
+          <div class="mi"><span>📖</span><div><b>Pelajari tata cara sholat dulu</b><p>YouTube: "cara sholat untuk pemula". Tidak perlu sempurna dari awal — yang penting mulai.</p></div></div>
+          <div class="mi"><span>⏰</span><div><b>Pasang alarm 5 waktu sekarang</b><p>Subuh 05.00, Dzuhur 12.00, Ashar 15.30, Maghrib 18.00, Isya 19.30. Setiap alarm = reminder untuk berhenti sebentar.</p></div></div>
+          <div class="mi"><span>🔗</span><div><b>Hubungkan sholat dengan tujuan</b><p>Setiap sholat adalah momen berdoa untuk target 20 juta, untuk bebas PMO, untuk hidup yang lebih baik. Ini bukan beban — ini senjata.</p></div></div>
+        </div>
+        <div class="mb">
+          <h3>⚡ Anti-Malas Setiap Hari</h3>
+          <div class="mi"><span>🛏️</span><div><b>Jangan rebahan setelah bangun</b><p>Langsung duduk di pinggir kasur. Minum air. Kaki ke lantai. Otak butuh sinyal "hari sudah mulai".</p></div></div>
+          <div class="mi"><span>⏱️</span><div><b>Aturan 2 menit</b><p>Tugas butuh kurang dari 2 menit? Kerjakan sekarang. Tidak ada "nanti" untuk hal kecil.</p></div></div>
+          <div class="mi"><span>🪪</span><div><b>Identitas baru, bukan janji baru</b><p>Bukan "Saya akan rajin." Tapi: "Saya adalah orang yang bangun jam 5 dan kelola bisnisnya setiap hari."</p></div></div>
+        </div>
+        <div class="mb">
+          <h3>💤 Perbaiki Pola Tidur</h3>
+          <div class="mi"><span>📉</span><div><b>Mundurkan 30 menit per minggu</b><p>Minggu 1: tidur 00.30. Minggu 2: 00.00. Minggu 3: 23.30. Minggu 4: 23.00. Bertahap — bukan langsung.</p></div></div>
+          <div class="mi"><span>📱</span><div><b>HP di luar kamar saat tidur</b><p>Ini satu perubahan yang paling berdampak. Tidak ada HP di kasur = tidur lebih cepat dan bangun lebih mudah.</p></div></div>
+          <div class="mi"><span>☀️</span><div><b>Cahaya pagi adalah alarm terbaik</b><p>Buka gorden segera setelah bangun. Cahaya matahari menghentikan melatonin dan memberi sinyal "waktunya aktif".</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TAB 5 · CHECKLIST
+    ═══════════════════════════════════ -->
+    <section class="tab" id="tab-checklist">
+      <div class="sec-head">
+        <h2>Checklist Harian</h2>
+        <p id="cl-date"></p>
+      </div>
+
+      <div class="prog-row">
+        <span class="prog-stat"><span id="cl-done">0</span>/10 selesai</span>
+        <div class="prog-track"><div class="prog-bar" id="prog-bar"></div></div>
+        <span class="prog-pct" id="prog-pct">0%</span>
+      </div>
+
+      <div class="cl-list" id="checklist">
+        <div class="ci" data-id="0"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Bangun jam 05.00</b><s>Langsung duduk, minum air — jangan rebahan lagi</s></div><span class="ctag tag-pagi">Pagi</span></div>
+        <div class="ci" data-id="1"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Sholat Subuh</b><s>Habit baru yang paling penting dibangun sekarang</s></div><span class="ctag tag-ibadah">Ibadah</span></div>
+        <div class="ci" data-id="2"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Olahraga 20 menit</b><s>Push-up, stretching, atau jalan — apapun itu</s></div><span class="ctag tag-sehat">Sehat</span></div>
+        <div class="ci" data-id="3"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Sholat Dzuhur, Ashar, Maghrib, Isya</b><s>4 waktu setelah Subuh — usahakan tidak bolong</s></div><span class="ctag tag-ibadah">Ibadah</span></div>
+        <div class="ci" data-id="4"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Kelola toko Shopee</b><s>Cek pesanan, balas chat, kirim link GDrive ke pembeli</s></div><span class="ctag tag-bisnis">Bisnis</span></div>
+        <div class="ci" data-id="5"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Update atau tambah 1 listing baru</b><s>Thumbnail, judul, deskripsi, atau produk baru</s></div><span class="ctag tag-bisnis">Bisnis</span></div>
+        <div class="ci" data-id="6"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>1 tindakan income lain</b><s>Afiliasi, reseller, atau kerjakan sumber income tidak tetap</s></div><span class="ctag tag-bisnis">Bisnis</span></div>
+        <div class="ci" data-id="7"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Bebas PMO hari ini</b><s>Tidak buka konten trigger sama sekali</s></div><span class="ctag tag-mindset">Mindset</span></div>
+        <div class="ci" data-id="8"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Belajar 30 menit</b><s>Copywriting, Canva, TikTok marketing — pilih satu</s></div><span class="ctag tag-skill">Skill</span></div>
+        <div class="ci" data-id="9"><div class="cb"><div class="ci-check"></div></div><div class="cc"><b>Tidur lebih awal dari kemarin</b><s>Tujuan akhir: tidur jam 23.00. Mundur 30m/minggu.</s></div><span class="ctag tag-sehat">Sehat</span></div>
+      </div>
+
+      <div class="cl-footer">
+        <button class="reset-btn" id="reset-cl">Reset checklist hari ini</button>
+        <div class="quote-card"><p id="quote-text"></p></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
